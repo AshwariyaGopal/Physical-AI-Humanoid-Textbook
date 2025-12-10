@@ -1,0 +1,82 @@
+openapi: 3.0.0
+info:
+  title: VLA LLM Cognitive Planning API
+  version: 1.0.0
+  description: API for translating natural language commands into ROS 2 action sequences using an LLM.
+
+paths:
+  /vla/plan:
+    post:
+      summary: Generate ROS 2 Plan from Natural Language Command
+      operationId: generateRosPlan
+      requestBody:
+        description: Natural language command for the robot.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NaturalLanguageCommand'
+      responses:
+        '200':
+          description: Successfully generated ROS 2 action plan in YAML format.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ROS2PlanResponse'
+        '400':
+          description: Invalid or ambiguous command.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Internal server error.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    NaturalLanguageCommand:
+      type: object
+      required:
+        - command
+      properties:
+        command:
+          type: string
+          description: The natural language command for the robot (e.g., "Clean the room").
+          example: "Go to the kitchen and pick up the mug."
+
+    ROS2PlanResponse:
+      type: object
+      required:
+        - plan_yaml
+      properties:
+        plan_yaml:
+          type: string
+          description: The generated YAML sequence of low-level ROS 2 actions.
+          example: |
+            - action: nav2_action_server/NavigateToPose
+              parameters:
+                x: 1.0
+                y: 0.5
+                theta: 0.0
+            - action: grasp_action_server/GraspObject
+              parameters:
+                object_id: "mug_red"
+
+    ErrorResponse:
+      type: object
+      required:
+        - error
+        - details
+      properties:
+        error:
+          type: string
+          description: A brief description of the error.
+          example: "InvalidCommand"
+        details:
+          type: string
+          description: Detailed explanation of why the command failed (e.g., "Command is ambiguous", "Physically impossible action requested").
+          example: "The command 'Fly to the moon' is physically impossible for this robot."
