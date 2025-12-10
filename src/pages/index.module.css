@@ -10,6 +10,7 @@
   overflow: hidden;
   background-color: #1E90FF; /* Hero background color */
   color: black; /* Hero text color */
+  min-height: 80vh; /* Increase hero section height */
 }
 
 .heroBanner h1,
