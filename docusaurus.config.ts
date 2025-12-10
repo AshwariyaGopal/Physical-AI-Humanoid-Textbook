@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'AshwariyaGopal', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-humanoid-textbook', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -73,7 +73,7 @@ const config: Config = {
     navbar: {
       title: 'Physical AI & Humanoid Robotics Textbook', // Updated navbar title
       logo: {
-        alt: 'Physical AI & Humanoid Robotics Textbook Logo', // Updated logo alt text
+        alt: 'Logo', // Updated logo alt text
         src: 'img/my-logo.jpg', // Updated logo source
       },
       items: [
