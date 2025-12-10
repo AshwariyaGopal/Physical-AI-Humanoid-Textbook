@@ -15,10 +15,10 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://AshwariyaGopal.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/physical-ai-humanoid-textbook/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -82,7 +82,7 @@ const config: Config = {
           sidebarId: 'tutorialSidebar', // Assuming 'tutorialSidebar' leads to the book's root
           position: 'left',
           label: 'Textbook', // Changed 'Tutorial' to 'Textbook'
-          to: '/docs/intro', // Explicitly link to the intro document
+          to: '/docs/Introduction/intro', // Explicitly link to the intro document
         },
         {
           href: 'https://github.com/AshwariyaGopal', // Updated GitHub link
@@ -119,7 +119,7 @@ const config: Config = {
           items: [
             {
               label: 'Textbook', // Updated footer link
-              to: '/docs/intro',
+              to: '/docs/Introduction/intro',
             },
           ],
         },
