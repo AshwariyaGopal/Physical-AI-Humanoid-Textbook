@@ -158,7 +158,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-  clientModules: [require.resolve('./static/js/language.js')], // Inject language.js script
+  // clientModules: [require.resolve('./static/js/language.js')], // Inject language.js script
 };
 
 export default config;
