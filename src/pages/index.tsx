@@ -16,12 +16,22 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">
+          A Complete Textbook on Physical AI & Humanoid Robotics.
+        </p>
+        <p className="hero__subtitle">
+          Learn Robotics, Digital Twins, Control Theory, and Embodied AI in one place.
+        </p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--primary button--lg"
             to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            Start Reading
+          </Link>
+          <Link
+            className="button button--secondary button--lg"
+            to="/docs">
+            Textbook Overview
           </Link>
         </div>
       </div>

@@ -8,6 +8,13 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  background-color: #1E90FF; /* Hero background color */
+  color: black; /* Hero text color */
+}
+
+.heroBanner h1,
+.heroBanner p {
+  color: black; /* Ensure all text within hero is black */
 }
 
 @media screen and (max-width: 996px) {
@@ -20,4 +27,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem; /* Add some space between buttons */
+  margin-top: 2rem; /* Add some space above buttons */
+}
+
+.buttons .button--primary {
+  background-color: #003366; /* Primary button background */
+  color: white; /* Primary button text */
+  border: 1px solid #003366; /* Ensure border matches background */
+}
+
+.buttons .button--primary:hover {
+  background-color: #004d99; /* Slightly darker on hover */
+  border-color: #004d99;
+}
+
+.buttons .button--secondary {
+  background-color: transparent; /* Secondary button background */
+  color: #003366; /* Secondary button text */
+  border: 1px solid #003366; /* Secondary button border */
+}
+
+.buttons .button--secondary:hover {
+  color: #004d99;
+  border-color: #004d99;
 }
