@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
+  title: 'Physical AI & Humanoid Robotics Textbook', // Updated site title
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -32,7 +32,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'ur'], // Added Urdu locale for i18n
   },
 
   presets: [
@@ -41,26 +41,14 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          remarkPlugins: [require('remark-math')],
+          rehypePlugins: [require('rehype-katex')],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // Removed blog plugin
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -68,30 +56,58 @@ const config: Config = {
     ],
   ],
 
-  themeConfig: {
-    // Replace with your project's social card
+      themeConfig: {
+      stylesheets: [
+        {
+          href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',
+          type: 'text/css',
+          integrity:
+            'sha384-AwFNzM2rERfK0ZtktOfVg3VzC5bMP1FIhUjR8nypQoIrk71BhJfGlZzaNyloswI',
+          crossorigin: 'anonymous',
+        },
+      ],    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'My Site',
+      title: 'Physical AI & Humanoid Robotics Textbook', // Updated navbar title
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Physical AI & Humanoid Robotics Textbook Logo', // Updated logo alt text
+        src: 'img/my-logo.jpg', // Updated logo source
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'tutorialSidebar', // Assuming 'tutorialSidebar' leads to the book's root
           position: 'left',
-          label: 'Tutorial',
+          label: 'Textbook', // Changed 'Tutorial' to 'Textbook'
+          to: '/docs/intro', // Explicitly link to the intro document
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/AshwariyaGopal', // Updated GitHub link
           label: 'GitHub',
           position: 'right',
+        },
+        // Language Dropdown for dynamic translation
+        {
+          type: 'dropdown',
+          label: 'Language',
+          position: 'right',
+          items: [
+            {
+              label: 'English',
+              // Use href and onclick to trigger client-side script for current page translation
+              href: '#',
+              onClick: 'window.switchLanguage(\'en\')',
+            },
+            {
+              label: 'Urdu',
+              // Use href and onclick to trigger client-side script for current page translation
+              href: '#',
+              onClick: 'window.switchLanguage(\'ur\')',
+            },
+          ],
         },
       ],
     },
@@ -102,7 +118,7 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
+              label: 'Textbook', // Updated footer link
               to: '/docs/intro',
             },
           ],
@@ -127,13 +143,10 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            // Removed blog link from footer
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/AshwariyaGopal', // Updated GitHub link
             },
           ],
         },
@@ -145,6 +158,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+  clientModules: [require.resolve('./static/js/language.js')], // Inject language.js script
 };
 
 export default config;
