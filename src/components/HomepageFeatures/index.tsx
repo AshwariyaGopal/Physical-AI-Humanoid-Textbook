@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Embodied AI',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/EMBODIED AI.jpeg').default,
     description: (
       <>
         Explore how intelligent systems learn to perceive and interact with the physical world. This section delves into the principles of embodied cognition and real-world robotic applications.
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Sim-to-Real Transfer',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/SIM_AI.png').default,
     description: (
       <>
         Learn the techniques for developing and testing robot behaviors in high-fidelity simulations. Discover how to effectively transfer these learned skills to physical robots for robust performance.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Vision-Language-Action',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/VISION_AI.jpeg').default,
     description: (
       <>
         Understand the synergy of perception, language, and physical action in advanced robotic platforms. Build systems that interpret complex commands and execute intelligent tasks autonomously.
