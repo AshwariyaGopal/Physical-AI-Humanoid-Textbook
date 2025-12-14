@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Embodied AI',
-    Svg: require('@site/static/img/EMBODIED AI.jpeg').default,
+    Svg: require('@site/static/img/EMBODIED_AI.jpeg').default,
     description: (
       <>
         Explore how intelligent systems learn to perceive and interact with the physical world. This section delves into the principles of embodied cognition and real-world robotic applications.
