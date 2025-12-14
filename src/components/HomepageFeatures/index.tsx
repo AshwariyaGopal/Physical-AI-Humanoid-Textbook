@@ -11,32 +11,29 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Embodied AI',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Explore how intelligent systems learn to perceive and interact with the physical world. This section delves into the principles of embodied cognition and real-world robotic applications.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Sim-to-Real Transfer',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Learn the techniques for developing and testing robot behaviors in high-fidelity simulations. Discover how to effectively transfer these learned skills to physical robots for robust performance.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Vision-Language-Action',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Understand the synergy of perception, language, and physical action in advanced robotic platforms. Build systems that interpret complex commands and execute intelligent tasks autonomously.
       </>
     ),
   },
