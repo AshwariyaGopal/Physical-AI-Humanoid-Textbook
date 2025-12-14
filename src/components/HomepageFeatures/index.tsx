@@ -61,6 +61,12 @@ export default function HomepageFeatures(): ReactNode {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
+          <div className="col col--12 text--center margin-bottom--lg">
+            <Heading as="h2">What You Will Learn</Heading>
+            <p>Discover the engineering principles behind Physical AI as you learn to build, simulate, and control humanoid robots from the ground up. This curriculum guides you through essential technologies including ROS2, digital twins, and modern control theory, enabling you to translate code into real-world motion. By mastering these integrated systems, you will acquire the practical skills necessary to design and deploy autonomous machines capable of complex interaction.</p>
+          </div>
+        </div>
+        <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
