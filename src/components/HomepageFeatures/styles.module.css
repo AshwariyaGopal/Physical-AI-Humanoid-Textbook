@@ -3,9 +3,18 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  margin-top: 2rem; /* Small vertical gap */
 }
 
 .featureSvg {
   height: 200px;
   width: 200px;
+}
+
+.learnHeading {
+  font-size: 2.5rem; /* Slightly larger heading */
+}
+
+.learnParagraph {
+  font-size: 1.1rem; /* Slightly larger paragraph text */
 }
