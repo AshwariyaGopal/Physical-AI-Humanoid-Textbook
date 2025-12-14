@@ -5,14 +5,14 @@ import styles from './styles.module.css';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  imgPath: string;
   description: ReactNode;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Embodied AI',
-    Svg: require('@site/static/img/EMBODIED_AI.jpeg').default,
+    imgPath: '/img/EMBODIED_AI.jpeg',
     description: (
       <>
         Explore how intelligent systems learn to perceive and interact with the physical world. This section delves into the principles of embodied cognition and real-world robotic applications.
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Sim-to-Real Transfer',
-    Svg: require('@site/static/img/SIM_AI.png').default,
+    imgPath: '/img/SIM_AI.png',
     description: (
       <>
         Learn the techniques for developing and testing robot behaviors in high-fidelity simulations. Discover how to effectively transfer these learned skills to physical robots for robust performance.
@@ -30,7 +30,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Vision-Language-Action',
-    Svg: require('@site/static/img/VISION_AI.jpeg').default,
+    imgPath: '/img/VISION_AI.jpeg',
     description: (
       <>
         Understand the synergy of perception, language, and physical action in advanced robotic platforms. Build systems that interpret complex commands and execute intelligent tasks autonomously.
@@ -39,11 +39,11 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, imgPath, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureImg} src={imgPath} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
