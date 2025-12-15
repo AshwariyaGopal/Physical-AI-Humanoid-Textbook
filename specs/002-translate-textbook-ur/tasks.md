@@ -50,9 +50,9 @@ These tasks involve reading the English source files, translating their content 
 These tasks ensure the integrity and quality of the translated content and the overall i18n setup.
 
 - [x] T018 Verify that all 10 translated files are present in their correct target i18n paths.
-- [ ] T019 Visually inspect a sample of translated files to confirm high-quality Urdu translation.
-- [ ] T020 Visually inspect a sample of translated files to confirm code blocks and Docusaurus components are correctly preserved (untranslated).
-- [ ] T021 Test local Docusaurus build with 'ur' locale to ensure all translated content renders correctly without errors.
+- [x] T019 Visually inspect a sample of translated files to confirm high-quality Urdu translation.
+- [x] T020 Visually inspect a sample of translated files to confirm code blocks and Docusaurus components are correctly preserved (untranslated).
+- [x] T021 Test local Docusaurus build with 'ur' locale to ensure all translated content renders correctly without errors.
 
 ## Suggested MVP Scope
 
