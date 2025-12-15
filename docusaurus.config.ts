@@ -40,6 +40,8 @@ const config: Config = {
       'classic',
       {
         docs: {
+          path: 'docs', // Explicitly set path
+          routeBasePath: 'docs', // Explicitly set routeBasePath
           sidebarPath: './sidebars.ts',
           remarkPlugins: [require('remark-math')],
           rehypePlugins: [require('rehype-katex')],
