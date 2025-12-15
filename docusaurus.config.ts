@@ -91,23 +91,8 @@ const config: Config = {
         },
         // Language Dropdown for dynamic translation
         {
-          type: 'dropdown',
-          label: 'Language',
+          type: 'localeDropdown',
           position: 'right',
-          items: [
-            {
-              label: 'English',
-              // Use href and onclick to trigger client-side script for current page translation
-              href: '#',
-              onClick: 'window.switchLanguage(\'en\')',
-            },
-            {
-              label: 'Urdu',
-              // Use href and onclick to trigger client-side script for current page translation
-              href: '#',
-              onClick: 'window.switchLanguage(\'ur\')',
-            },
-          ],
         },
       ],
     },
