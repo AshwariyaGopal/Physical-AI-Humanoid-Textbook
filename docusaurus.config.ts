@@ -82,7 +82,7 @@ const config: Config = {
           sidebarId: 'tutorialSidebar', // Assuming 'tutorialSidebar' leads to the book's root
           position: 'left',
           label: 'Textbook', // Changed 'Tutorial' to 'Textbook'
-          to: '/docs/Introduction/intro', // Explicitly link to the intro document
+          to: '/docs/intro', // Explicitly link to the intro document
         },
         {
           href: 'https://github.com/AshwariyaGopal', // Updated GitHub link
@@ -104,7 +104,7 @@ const config: Config = {
           items: [
             {
               label: 'Textbook', // Updated footer link
-              to: '/docs/Introduction/intro',
+              to: '/docs/intro',
             },
           ],
         },

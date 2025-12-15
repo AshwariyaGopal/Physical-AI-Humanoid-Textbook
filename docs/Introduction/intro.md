@@ -1,4 +1,5 @@
 ---
+id: intro
 sidebar_position: 1
 title: Physical AI & Humanoid Robotics Textbook
 ---
