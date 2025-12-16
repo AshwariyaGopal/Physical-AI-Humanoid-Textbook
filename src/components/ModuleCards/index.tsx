@@ -41,11 +41,6 @@ const ModuleList: ModuleItem[] = [
     description: 'Examine the critical ethical, legal, and societal implications of intelligent humanoid robotics. Understand frameworks for responsible development, privacy, safety, and the societal impact of autonomous systems.',
     link: '/docs/Module-6-Ethical-and-Legal-Embodiment-ELSI/Week-8-Ethical-Frameworks',
   },
-  {
-    title: 'Appendix',
-    description: 'Access supplementary materials, advanced topics, and reference guides to deepen your understanding and extend your knowledge of Physical AI and Humanoid Robotics.',
-    link: '/docs/appendix', // Assuming an appendix page exists or will be created
-  },
 ];
 
 function Module({ title, description, link }: ModuleItem) {
