@@ -1,0 +1,72 @@
+openapi: 3.0.3
+info:
+  title: Textbook RAG Ingestion API
+  version: 1.0.0
+paths:
+  /ingest:
+    post:
+      summary: Trigger the content ingestion pipeline
+      operationId: triggerIngestion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                urls:
+                  type: array
+                  items:
+                    type: string
+                    format: uri
+                  description: List of URLs to crawl. If empty, uses default config.
+                force_refresh:
+                  type: boolean
+                  default: false
+                  description: If true, re-processes URLs even if unchanged.
+      responses:
+        '202':
+          description: Ingestion started successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id:
+                    type: string
+                    format: uuid
+                  status:
+                    type: string
+                    example: "processing"
+  /ingest/{job_id}:
+    get:
+      summary: Get the status of an ingestion job
+      operationId: getIngestionStatus
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Job status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id:
+                    type: string
+                  status:
+                    type: string
+                    enum: [pending, processing, completed, failed]
+                  processed_count:
+                    type: integer
+                  error_count:
+                    type: integer
+                  errors:
+                    type: array
+                    items:
+                      type: string
