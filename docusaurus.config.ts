@@ -20,6 +20,12 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  // Custom fields to expose environment variables or other global settings
+  customFields: {
+    apiUrl: process.env.REACT_APP_API_URL || 'http://localhost:8000',
+    backendUrl: process.env.BACKEND_URL || 'http://localhost:8000',
+  },
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'AshwariyaGopal', // Usually your GitHub org/user name.

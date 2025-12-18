@@ -65,7 +65,7 @@ function Module({ title, description, link }: ModuleItem) {
   );
 }
 
-export default function ModuleCards(): JSX.Element {
+export default function ModuleCards(): React.ReactElement {
   return (
     <section className={styles.modules}>
       <div className="container">
